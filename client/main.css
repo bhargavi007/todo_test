@@ -1,0 +1,198 @@
+body {
+  font-family: sans-serif;
+  background-image: linear-gradient(to bottom, #FFE5CE, #FFF4EB 100%);
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+ 
+ .opennav{
+  font-size: 30px;
+  cursor:pointer; 
+  position:absolute; 
+  right:20px;
+
+ }
+
+ .sidenav {
+    height: 100%;
+    width: 0;
+    position:absolute;
+    top: 0;
+    left:850px;
+    background-image: linear-gradient(to bottom, #262626, #BEB5B1 100%);
+    overflow-x: hidden;
+    overflow-y:hidden;
+    padding-top: 120px;
+}
+
+.sidenav a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FF6347;
+    display: block;
+    padding-left:30px;
+    
+}
+
+.sidenav a:hover {
+    color: #fff;
+}
+
+.sidenav ul {
+  margin: 5px;
+  padding: 0;
+  background: #DDA0DD;
+}
+
+.sidenav li {
+  list-style: none;
+  padding: 2px 5px;
+  border: #eee solid 1px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);;
+  margin:2px;
+  height:18px;
+  background-color: #FFFFD0;
+  overflow: hidden;
+}
+
+.sidenav li .text {
+  margin-left: 2px;
+}
+
+.showfinish{
+  display: none;
+}
+
+.showdelete{
+  display:none;
+}
+
+.closenav{
+    position: absolute;
+    top: 10px;
+    right:15px;
+    font-size: 36px;
+    cursor:pointer; 
+}
+
+.container {
+  max-width: 700px;
+  min-height: 100%;
+  background: white;
+  margin-left:150px;
+}
+ 
+header {
+  background: #d2edf4;
+  background-image: linear-gradient(to bottom, #DDA0DD, #e1e5f0 100%);
+  padding: 20px 15px 15px 15px;
+  position: relative;
+}
+
+.login{
+  float:right;
+  position:absolute;
+  right:90px;
+  font-size:20px;
+  text-decoration-style: none;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 1em;
+}
+ 
+form {
+  margin-top: 10px;
+  position: relative;
+}
+ 
+.new-task input {
+  padding: 10px 0;
+  background: transparent;
+  width: 100%;
+  margin-right: 80px;
+  font-size: 1em;
+  border-style:none;
+}
+ 
+.new-task input:focus{
+  outline-style: none;
+}
+ 
+.container ul {
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
+.container li {
+  position: relative;
+  list-style: none;
+  padding: 10px 2px;
+  border: #eee solid 1px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);;
+  margin:5px;
+  height:18px;
+  background-color: #FFFFD0;
+  overflow: hidden;
+}
+
+
+.dropbtn {
+    font-size: 15px;
+    border:none;
+    cursor: pointer;
+    background-color: #FFFFD0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    left:650px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    z-index: 1;
+    right:0px;
+    text-align:center;
+    font-size:12px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #E0FFFF;
+}
+
+
+
+
+
+
+
+ 
