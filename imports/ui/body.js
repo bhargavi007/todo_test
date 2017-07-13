@@ -83,7 +83,6 @@ Template.body.events({
   },
 
   'click .delete_delete'(event){
-    console.log("hello");
     var result = confirm("Remove from deleted list!"); //confirm before deleting the task
        if (result){
            Meteor.call('deletedtasks.remove', this._id);
