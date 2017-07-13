@@ -60,7 +60,7 @@ body {
   margin:2px;
   height:18px;
   background-color: #FFFFD0;
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .sidenav li .text {
@@ -146,7 +146,8 @@ form {
   margin:5px;
   height:18px;
   background-color: #FFFFD0;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   line-height: 23px;
 }
 
