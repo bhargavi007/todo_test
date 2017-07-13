@@ -60,7 +60,7 @@ body {
   margin:2px;
   height:18px;
   background-color: #FFFFD0;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .sidenav li .text {
@@ -146,14 +146,19 @@ form {
   margin:5px;
   height:18px;
   background-color: #FFFFD0;
-  overflow: hidden;
+  overflow: auto;
+  line-height: 23px;
 }
 
+.container li a{
+  line-height:15px;
+}
 
 .dropbtn {
     font-size: 15px;
     border:none;
     cursor: pointer;
+    margin-left:5px;
     background-color: #FFFFD0;
 }
 
