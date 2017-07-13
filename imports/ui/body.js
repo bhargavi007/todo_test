@@ -92,7 +92,8 @@ Template.body.events({
 
 
   'click .opennav'(event){
-  	   document.getElementById("mySidenav").style.width="320px";
+    console.log('in click event');
+  	document.getElementById("mySidenav").style.width="280px";
   },
 
   'click .closenav'(event){

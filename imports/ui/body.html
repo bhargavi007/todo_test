@@ -1,9 +1,33 @@
 <body>
 
-<div id="mySidenav" class="sidenav">
+  <span class="container">
+    <header>
+
+      <h1>Todo List</h1>
+      <span class="login" > {{> loginButtons }} </span>
+       <span class="opennav" >&#9776;</span> 
+           
+
+       {{ #if currentUser}}          <!--cannot add task if not signed in -->
+      <form class="new-task">
+        <input type="text" name="text" placeholder="  Type to add new tasks" />
+      </form>
+      {{/if}}
+    </header>
+ 
+    <ul>
+      
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    
+    </ul>
+  </span>
+
+  <span id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closenav">&times;</a>
 
-  <a href="javascript:void(0)" class="finish">Completed Tasks</a>
+  <a href="javascript:void(0)" class="finish">Completed Tasks </a>
   <div class="showfinish">
     <ul>
   
@@ -25,30 +49,7 @@
     </ul>
   </div>
 
-</div>
-
-  <div class="container">
-    <header>
-      <h1>Todo List</h1>
-      <span class="login" > {{> loginButtons }} </span>
-
-      <span class="opennav" >&#9776;</span>      
-
-       {{ #if currentUser}}          <!--cannot add task if not signed in -->
-      <form class="new-task">
-        <input type="text" name="text" placeholder="  Type to add new tasks" />
-      </form>
-      {{/if}}
-    </header>
- 
-    <ul>
-      
-      {{#each tasks}}
-        {{> task}}
-      {{/each}}
-    
-    </ul>
-  </div>
+</span>
 </body>
  
 <template name="task">

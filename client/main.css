@@ -11,6 +11,14 @@ body {
   margin: 0;
   font-size: 14px;
 }
+
+.container {
+  width: 700px;
+  min-height: 100%;
+  background: white;
+  margin-left:270px;
+  position: absolute;
+}
  
  .opennav{
   font-size: 30px;
@@ -21,11 +29,10 @@ body {
  }
 
  .sidenav {
-    height: 100%;
+    min-height: 100%;
     width: 0;
     position:absolute;
     top: 0;
-    left:850px;
     background-image: linear-gradient(to bottom, #262626, #BEB5B1 100%);
     overflow-x: hidden;
     overflow-y:hidden;
@@ -38,7 +45,7 @@ body {
     font-size: 25px;
     color: #FF6347;
     display: block;
-    padding-left:30px;
+    padding-left:20px;
     
 }
 
@@ -83,12 +90,7 @@ body {
     cursor:pointer; 
 }
 
-.container {
-  max-width: 700px;
-  min-height: 100%;
-  background: white;
-  margin-left:150px;
-}
+
  
 header {
   background: #d2edf4;
@@ -100,13 +102,13 @@ header {
 .login{
   float:right;
   position:absolute;
-  right:90px;
+  left:150px;
   font-size:20px;
   text-decoration-style: none;
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 20px;
   margin: 0;
   margin-bottom: 10px;
   display: inline-block;
@@ -143,7 +145,7 @@ form {
   padding: 10px 2px;
   border: #eee solid 1px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);;
-  margin:5px;
+  margin:3px;
   height:18px;
   background-color: #FFFFD0;
   overflow-y: auto;
@@ -193,6 +195,48 @@ form {
 
 .dropdown-content a:hover {
   background-color: #E0FFFF;
+}
+
+
+
+@media only screen and (max-width: 975px) {
+  
+
+  .container{
+    max-width:450px;
+  }
+    
+}
+
+@media only screen and (max-width: 740px) {
+  
+  .container{
+    max-width:420px;
+    margin-left:120px;
+  }
+
+  h1{
+    font-size:15px;
+  }
+
+  .login{
+    font-size:15px;
+    left:100px;
+  }
+
+  .opennav{
+    font-size:15px;
+  }
+    
+}
+
+@media only screen and (max-width: 550px) {
+  
+  .container{
+    max-width:310px;
+    margin-left:30px;
+  }
+    
 }
 
 
