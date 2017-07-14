@@ -1,0 +1,1 @@
+nohup /usr/local/bin/meteor --production >>./logs/todo.log 2>&1 &
