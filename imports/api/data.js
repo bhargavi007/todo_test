@@ -7,6 +7,7 @@ export const Completedtasks = new Mongo.Collection('completedtasks');
 export const Deletedtasks= new Mongo.Collection('deletedtasks');
 
 if (Meteor.isServer) {
+
   Meteor.publish('tasks', function tasksPublication() {
     return Tasks.find();
   });
@@ -20,9 +21,9 @@ if (Meteor.isServer) {
   });
 }
  
+
 Meteor.methods({
   'tasks.insert'(text) {
- 
     Tasks.insert({
       text,
       createdAt: new Date(),
@@ -41,7 +42,6 @@ Meteor.methods({
   },
 
   'completedtasks.insert'(completedtext){
-
   	Completedtasks.insert({
   		completedtext,
   		createdAt: new Date(),
@@ -55,7 +55,6 @@ Meteor.methods({
   },
 
   'deletedtasks.insert'(deletedtext){
-
   	Deletedtasks.insert({
   		deletedtext,
   		createdAt: new Date(),

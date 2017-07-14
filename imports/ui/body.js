@@ -53,46 +53,42 @@ Template.body.events({
      event.preventDefault();
      var newtext = $(event.target).closest('li.note').find('.text').text();
      console.log(newtext);
-       Meteor.call('tasks.update',this._id,newtext);
+       Meteor.call('tasks.update',this._id,newtext);                 //updates the db with new text
   },
 
   'click .delete'(event) {
       var deletedtext = $(event.target).closest('li.note').find('.text').text();  
        var result = confirm("Delete the task!"); //confirm before deleting the task
        if (result){
-           Meteor.call('deletedtasks.insert',deletedtext);
+           Meteor.call('deletedtasks.insert',deletedtext);           //inserts to the trash and then deletes from tasks collection
            Meteor.call('tasks.remove', this._id);
        }
   },
 
   'click .completed'(event){
-
       var completedtext = $(event.target).closest('li.note').find('.text').text(); 
       var result = confirm("Is the task completed!");
       if(result){
-      Meteor.call('completedtasks.insert', completedtext);
-      Meteor.call(Meteor.call('tasks.remove', this._id));
-    }
+        Meteor.call('completedtasks.insert', completedtext);           //inserts to completed and then deletes from tasks
+        Meteor.call(Meteor.call('tasks.remove', this._id));
+      }
   },
 
   'click .delete_complete'(event){
-    var result = confirm("Remove from completed list!"); //confirm before deleting the task
+    var result = confirm("Remove from completed list!");              //confirm before deleting the task
        if (result){
            Meteor.call('completedtasks.remove', this._id);
        }
   },
 
   'click .delete_delete'(event){
-    var result = confirm("Remove from deleted list!"); //confirm before deleting the task
+    var result = confirm("Remove from deleted list!"); 
        if (result){
            Meteor.call('deletedtasks.remove', this._id);
        }
   },
 
-
-
   'click .opennav'(event){
-    console.log('in click event');
   	document.getElementById("mySidenav").style.width="280px";
   },
 
@@ -120,32 +116,13 @@ Template.body.events({
   	$(event.target).css('height' , '120px');
   },
 
-   'mouseleave li.note'(event){
+  'mouseleave li.note'(event){
   	$(event.target).css('height' , '18px');
-
-    var list = document.querySelector('li.note');
-       list.contentEditable = false;
-    
+    var list = document.querySelector('li.note');    //when the mouse leaves the note, we cannot edit
+    list.contentEditable = false;  
   },
 
   });
-  
- /* function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-*/
-  /*
-  'click .toggle-checked'() {
-    
-       Tasks.update(this._id, {
-        $set: { checked: ! this.checked },  // Set checked property to the opposite of its value
-       });
-  },
-  */
 
   
 

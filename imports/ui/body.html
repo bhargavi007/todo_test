@@ -13,14 +13,13 @@
         <input type="text" name="text" placeholder="  Type to add new tasks" />
       </form>
       {{/if}}
+
     </header>
  
-    <ul>
-      
+    <ul> 
       {{#each tasks}}
         {{> task}}
       {{/each}}
-    
     </ul>
   </span>
 
@@ -51,30 +50,27 @@
 
 </span>
 </body>
+
+
  
 <template name="task">
   <li class="note">
-
-
-  <div class="dropdown">
-    <button class="dropbtn"> &#9830; </button>
-    <div class="dropdown-content">
-    <a href="javascript:void(0)" class="edit">Edit</a>
-    <a href="javascript:void(0)" class="save"> Save </a>
-    <a href="javascript:void(0)" class="completed" > Completed </a>
-    <a href="javascript:void(0)" class="delete"> Delete </a>
+    <div class="dropdown">
+      <button class="dropbtn"> &#9830; </button>
+      <div class="dropdown-content">
+        <a href="javascript:void(0)" class="edit">Edit</a>
+        <a href="javascript:void(0)" class="save"> Save </a>
+        <a href="javascript:void(0)" class="completed" > Completed </a>
+        <a href="javascript:void(0)" class="delete"> Delete </a>
+      </div>
     </div>
-  </div>
-     <!-- <button class="delete">&times;</button> -->
-     <!--<input type="checkbox" checked="{{checked}}" class="toggle-checked"/> -->
-     <span class="text">{{text}}</span>
-  
+    <span class="text">{{text}}</span>
   </li>
-
 </template> 
 
+
 <template name="completedTasks" >
-  <li id=completed_tasks >
+  <li>
      <button class="delete_complete">&times;</button>
      <span class="completedtext">{{completedtext}}</span>
   </li>
@@ -82,7 +78,7 @@
 
 
 <template name="deletedTasks" >
-  <li id=deleted_tasks >
+  <li>
      <button class="delete_delete">&times;</button>
      <span class="deletedtext">{{deletedtext}}</span>
   </li>

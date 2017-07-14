@@ -90,8 +90,6 @@ body {
     cursor:pointer; 
 }
 
-
- 
 header {
   background: #d2edf4;
   background-image: linear-gradient(to bottom, #DDA0DD, #e1e5f0 100%);
@@ -197,19 +195,13 @@ form {
   background-color: #E0FFFF;
 }
 
-
-
 @media only screen and (max-width: 975px) {
-  
-
   .container{
     max-width:450px;
-  }
-    
+  }   
 }
 
 @media only screen and (max-width: 740px) {
-  
   .container{
     max-width:420px;
     margin-left:120px;
@@ -226,17 +218,14 @@ form {
 
   .opennav{
     font-size:15px;
-  }
-    
+  }   
 }
 
 @media only screen and (max-width: 550px) {
-  
   .container{
     max-width:310px;
     margin-left:30px;
-  }
-    
+  }   
 }
 
 
